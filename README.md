@@ -170,6 +170,8 @@ cp .env.example .env
 docker compose up -d --build
 ```
 
+GitHub Actions builds and publishes `ghcr.io/zenithh-studio/muse2api` on pushes to `main` and version tags. The `main` tag follows the default branch; `latest` is also updated there. GHCR creates new packages as private, so make the package public after its first successful publish if anonymous pulls are needed.
+
 ### Use a real account (browser driver)
 
 1. Install Chromium or Chrome and set `MUSE2API_DRIVER=browser` in `.env`.
